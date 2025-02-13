@@ -27,10 +27,11 @@ In this taks, the control plane is emulated by the **simple_switch_CLI** program
 - change the `mininet/task1-topo.py` to implement the above topology.
 
 ### **Hub Behavior (Current State)**:
-The provided `p4/hub.p4` program:
+You should understand the flows defined in `flows/s1-flows.txt`
+
+And the provided `p4/hub.p4` program. As an overview it:
 - **Broadcasts** every packet it receives to all ports except the ingress port.
 - Does not inspect or process any packet headers.
-- Understand the flows defined in `flows/s1-flows.txt`
 
 ### **Test your Hub setup**
 1. **Compile the P4 code**
