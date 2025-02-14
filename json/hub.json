@@ -115,8 +115,8 @@
       "name" : "deparser",
       "id" : 0,
       "source_info" : {
-        "filename" : "p4/task1-hub.p4",
-        "line" : 120,
+        "filename" : "p4/hub.p4",
+        "line" : 129,
         "column" : 8,
         "source_fragment" : "MyDeparser"
       },
@@ -131,7 +131,7 @@
   "learn_lists" : [],
   "actions" : [
     {
-      "name" : "task1hub85",
+      "name" : "hub95",
       "id" : 0,
       "runtime_data" : [],
       "primitives" : [
@@ -148,8 +148,8 @@
             }
           ],
           "source_info" : {
-            "filename" : "p4/task1-hub.p4",
-            "line" : 85,
+            "filename" : "p4/hub.p4",
+            "line" : 95,
             "column" : 7,
             "source_fragment" : "standard_metadata.mcast_grp = 1"
           }
@@ -170,8 +170,8 @@
             }
           ],
           "source_info" : {
-            "filename" : "p4/task1-hub.p4",
-            "line" : 97,
+            "filename" : "p4/hub.p4",
+            "line" : 107,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -184,19 +184,19 @@
       "name" : "ingress",
       "id" : 0,
       "source_info" : {
-        "filename" : "p4/task1-hub.p4",
-        "line" : 80,
+        "filename" : "p4/hub.p4",
+        "line" : 90,
         "column" : 8,
         "source_fragment" : "MyIngress"
       },
-      "init_table" : "tbl_task1hub85",
+      "init_table" : "tbl_hub95",
       "tables" : [
         {
-          "name" : "tbl_task1hub85",
+          "name" : "tbl_hub95",
           "id" : 0,
           "source_info" : {
-            "filename" : "p4/task1-hub.p4",
-            "line" : 85,
+            "filename" : "p4/hub.p4",
+            "line" : 95,
             "column" : 35,
             "source_fragment" : "="
           },
@@ -208,10 +208,10 @@
           "support_timeout" : false,
           "direct_meters" : null,
           "action_ids" : [0],
-          "actions" : ["task1hub85"],
+          "actions" : ["hub95"],
           "base_default_next" : null,
           "next_tables" : {
-            "task1hub85" : null
+            "hub95" : null
           },
           "default_entry" : {
             "action_id" : 0,
@@ -228,8 +228,8 @@
       "name" : "egress",
       "id" : 1,
       "source_info" : {
-        "filename" : "p4/task1-hub.p4",
-        "line" : 93,
+        "filename" : "p4/hub.p4",
+        "line" : 103,
         "column" : 8,
         "source_fragment" : "MyEgress"
       },
@@ -239,8 +239,8 @@
           "name" : "tbl_drop",
           "id" : 1,
           "source_info" : {
-            "filename" : "p4/task1-hub.p4",
-            "line" : 103,
+            "filename" : "p4/hub.p4",
+            "line" : 113,
             "column" : 12,
             "source_fragment" : "drop()"
           },
@@ -271,8 +271,8 @@
           "name" : "node_5",
           "id" : 0,
           "source_info" : {
-            "filename" : "p4/task1-hub.p4",
-            "line" : 102,
+            "filename" : "p4/hub.p4",
+            "line" : 112,
             "column" : 12,
             "source_fragment" : "standard_metadata.egress_port == standard_metadata.ingress_port"
           },
@@ -337,7 +337,7 @@
       ["standard_metadata", "priority"]
     ]
   ],
-  "program" : "p4/task1-hub.p4",
+  "program" : "p4/hub.p4",
   "__meta__" : {
     "version" : [2, 23],
     "compiler" : "https://github.com/p4lang/p4c"

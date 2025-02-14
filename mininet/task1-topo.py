@@ -91,7 +91,8 @@ class SingleSwitchTopo(Topo):
         
         # When declaring a link, using addr2=sw_mac assigns the specified MAC address  
         # to the second argument in the link, which in this case is the switch port.
-        self.addLink(h1, switch, addr2 = sw_mac_base % 1)
+        # the same logic is applyed to port2=1
+        self.addLink(h1, switch, port2 = 1, addr2 = sw_mac_base % 1)
 
         # TASK: Now you need to add 3 more host to the switch
 

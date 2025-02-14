@@ -50,6 +50,11 @@ simple_switch_CLI --thrift-port 9090 < flows/s1-flows.txt
 ```bash
 mininet> h1 ping h3 -c 5
 ```
+5. **Exit and Clean**
+```bash
+mininet> exit
+$ sudo mn -c
+```
 
 ### **L2 Switch Behavior (Your Goal)**:
 - Create a copy of hub.p4 and name it l2_switch.p4
