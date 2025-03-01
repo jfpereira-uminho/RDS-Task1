@@ -87,14 +87,24 @@ class SingleSwitchTopo(Topo):
         # Adding a host with the correct MAC and IP addresses. 
         h1 = self.addHost('h1',
                           ip = host_ip_base % 1,
-                          mac = host_mac_base % 1) 
+                          mac = host_mac_base % 1)
+        h2 = self.addHost('h2',
+                          ip = host_ip_base % 2,
+                          mac = host_mac_base % 2)
+        h3 = self.addHost('h3',
+                          ip = host_ip_base % 3,
+                          mac = host_mac_base % 3) 
+        h4 = self.addHost('h4',
+                          ip = host_ip_base % 4,
+                          mac = host_mac_base % 4) 
         
         # When declaring a link, using addr2=sw_mac assigns the specified MAC address  
         # to the second argument in the link, which in this case is the switch port.
         # the same logic is applyed to port2=1
         self.addLink(h1, switch, port2 = 1, addr2 = sw_mac_base % 1)
-
-        # TASK: Now you need to add 3 more host to the switch
+        self.addLink(h2, switch, port2 = 2, addr2 = sw_mac_base % 2)
+        self.addLink(h3, switch, port2 = 3, addr2 = sw_mac_base % 3)
+        self.addLink(h4, switch, port2 = 4, addr2 = sw_mac_base % 4)
 
 def main():
     # The 'topo' instance represents the network topology in Mininet.
